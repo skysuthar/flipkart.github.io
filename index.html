@@ -1,0 +1,585 @@
+<!DOGTYPE html>
+<html>
+<head>
+<style>
+
+body {
+   font-family: 'Varela Round', sans-serif;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    text-align: center;
+    padding-top: 30px;
+}
+.header {
+    
+    width: 100%;
+    height: 60px;
+    position: fixed;
+	
+    
+}
+.main {
+    height: 100%;
+    margin-top: 60px;
+    padding: 10px 50px;
+}
+#sidebarMenu {
+    
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 80px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: #00000000;
+	  opacity: 0.9;
+	  z-index: 1;
+}
+.menu li a:hover{
+    letter-spacing: 3px;        
+		background-image: linear-gradient(skyblue,#000000);		
+		transition: all 2s;
+			}
+.menu{
+    list-style: none; 
+    margin:0;
+    padding:0;
+}
+.menu li{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.menu li a{
+    color: #222222;
+    display: block;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+#openSidebarMenu:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input#openSidebarMenu{
+    display: none;
+}
+.sidebarIconToggle {
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    z-index: 99;
+    top: 22px;
+    left: 15px;
+    transition: all 0.3s;
+    cursor: pointer; 
+}
+.spinner {
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+.spinner.middle ,
+.spinner.bottom{
+    margin-top: 3px;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.middle {
+    opacity: 0;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.top {
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.bottom {
+    transform: rotate(-135deg);
+    margin-top: -9px;
+} 
+
+
+ 
+ 
+p:hover{
+background-color: purple;
+cursor: pointer;
+}
+.button input{
+        width:70%;
+			  background-color:blue;
+			  color:white;
+			  margin-top: 2%;
+			  }
+.slider1{
+              overflow: hidden;
+			  height: 380px;
+			
+             
+}
+.slider1 div figure{
+             float: left;
+			 width:50%;
+			 
+			 }
+			 
+.slider1 figure img{
+			float: left;
+		
+			
+			}
+.slider1 figure{
+              position:relative;
+			  width: 400%;
+			  margin: 0px;
+			  left: 0;
+			 display: flex;
+			  animation:20s slider infinite ;
+			  }
+			  
+  	 		  
+			@keyframes slider{
+		0%{
+			left: 0;
+			}
+			20%{
+			left: 0;
+			}
+			25%{
+			left: -100%;
+			}
+		45%{
+			left: -100%;
+			}
+			50%{
+			left: -200%;
+			}
+			70%{
+			left: -200%;
+			}
+			75%{
+			left: -300%;
+			
+			}
+			95%{
+			left:-300%;
+			}
+			
+			0%{
+			right: -300%;
+			}
+			 }
+			 .slider{
+              overflow: hidden;
+			  height: auto;
+			  
+			  
+}
+.slider figure div{
+             float: left;
+			 width:25%;
+			 }
+			 
+.slider figure img{
+			float: left;
+			}
+.slider figure{
+              position:relative;
+			  width: 399.9%;
+			  margin: 0px;
+			  left: 0;
+			  animation:20s slider infinite ;
+			  }
+			  
+			  
+			@keyframes slider{
+		0%{
+			left: 0;
+			}
+			20%{
+			left: 0;
+			}
+			25%{
+			left: -100%;
+			}
+		45%{
+			left: -100%;
+			}
+			50%{
+			left: -200%;
+			}
+			70%{
+			left: -200%;
+			}
+			75%{
+			left: -300%;
+			
+			}
+			95%{
+			left:-300%;
+			}
+			
+			0%{
+			right: -300%;
+			}
+			 }
+	
+.dropdown{
+			position:relative;
+      display: inline-block;
+    }
+.content{
+           display: none;
+           position: absolute;
+           width: 160px;
+           background-color:#f9f9f9;
+           box-shadow: 0px 0px 10px 3px #222222,   0px 0px 10px 3px #999999;
+		   }
+ .dropdown:hover .content{
+      display: block;
+			margin-left:-40px;
+			color: white;
+			background-image: linear-gradient(skyblue,black);
+			letter-spacing:2px;
+			text-shadow: 0px 0px 5spx #222222,   0px 0px 10px red;
+            z-index: 1;		
+            			
+             }			
+
+.shadow img:hover{
+             width:100%;
+			  box-shadow: -5px -5px 10px 3px pink , 4px 4px 10px 3px yellow ;
+		      border-radius: 5%;
+			  }
+th font:hover{
+              color:green;
+			  }
+.search input{
+                width: 70%;
+				height: 30px;
+			
+				}
+.btn input{
+          width: 95%;
+		  height: 30px;
+		  }
+.content p a{
+        text-decoration:none;
+			  color:white;
+			   }
+
+
+
+		 </style>
+         
+</head>
+<body>
+
+<table border="0" width="100%" height="50px" bgcolor="#2874F0">
+<tr>
+<th align="right"> <font color="white"><i>Flipkart</i></th>
+<th class="btn"  ><input type="text" placeholder="search for product, brand and more" ></th>
+<th class="search"><input type="button" value="search" name="seacrh" ></th>
+<th align="right"><a href="https://colorlib.com/etc/lf/Login_v1/index.html"><font color="white">Login & signup</th></a>
+<th> <font color="white">More</th>
+<th> <font color="white" >cart</th>
+</tr>
+</table>
+ <div class="header"></div>
+    <input type="checkbox" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner top"></div>
+        <div class="spinner middle"></div>
+        <div class="spinner bottom"></div>
+    </label>
+    <div id="sidebarMenu">
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+<table border="0" width="100%" height="45px" bgcolor="#FFFAFA">
+<th width="20%">
+<div class="dropdown">
+<span>Electronics</span>
+<div class="content">
+<p><a href="tv.html">TV</a></p>
+<p>Fridge</p>
+<p>Washing Machine</p>
+<p>Fan</p>
+</th>
+<th width="20%">
+<div class="dropdown">
+<span>Appliances<span>
+<div class="content">
+<p>Glasses</p>
+<p>Tea set</p>
+<p>Jummar</p>
+<p>chair</p>
+</th>
+<th width="20%">
+<div class="dropdown">
+<span>Baby & Kids</span>
+<div class="content">
+<p>Toy</p>
+<p>Clothes</p>
+<p>Baby Food</p>
+<p>Diaper</p>
+</th>
+<th width="20%">
+<div class="dropdown">
+<span>Man</span>
+<div class="content">
+<p>Watch</p>
+<p>Clothes</p>
+<p>Shoes</p>
+<p>wallet</p>
+</th>
+<th width="20%">
+<div class="dropdown">
+<span>Women</span>
+<div class="content">
+<p>Earings</p>
+<p>Clothes</p>
+<p>Shoes</p>
+<p>Purse</p>
+</th>
+</tr>
+</table>
+<div class="slider">
+<figure>
+<div class="slider">
+<img src="BBDTipSheet_mainbanner.jpg" width="100%" height="450px"></div>
+<div class="slider">
+<img src="4430fc7ab26742016aa7fb80610e6e41.jpg" width="100%" height="450px"></div>
+<div class="slider">
+<img src="e76228cd65761ae8fbc15522ebcc9686.png" width="100%" height="450px"></div>
+<div class="slider">
+<img src="flipkart3.jpg" width="100%" height="450px">
+</div>
+</figure>
+</div>
+<br><br>
+<table border="0" width="100%"  bgcolor="#FFFAFA">
+<tr class="jackie" >
+<th align="left"> <font size="5px" font color="gray"><marquee  behavior="alternate" scrollamount="15" direction="right">Mobile Phone</marquee></th>
+</tr>
+</table><br>
+<div class="slider1">
+<figure width="200%">
+<table border="0" width="200%">
+<tr class="shadow">
+<th width="25%"><img src="unnamed.png" width="90%"></th>
+<th width="20%"><img src="oppo.jpg" width="90%"></th>
+<th width="22%"><img src="oneplus3.jpg" width="90%"></th>
+<th width="20%"><img src="phone4.jpg" width="90%"></th>
+</tr>
+
+<tr>
+<th ><font size="4px">price: 90,000rs/-</th>
+<th><font size="4px">price: 25,000rs/-</th>
+<th><font size="4px">price: 55,000rs/-</th>
+<th><font size="4px">price: 35,000rs/-</th>
+</tr>
+<tr class="button">
+<th><a href="tvde.html" ><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="oppo.html"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="one%20plus.html"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="poco%20fq.html"><input type="button" value="Show Details" name="Show Details"></a></th>
+</tr>
+
+
+<table border="0" width="200%">
+<tr class="shadow">
+<th width="25%"><img src="unnamed.png" width="90%"></th>
+<th width="20%"><img src="oppo.jpg" width="90%"></th>
+<th width="22%"><img src="oneplus3.jpg" width="90%"></th>
+<th width="20%"><img src="phone4.jpg" width="90%"></th>
+</tr>
+
+<tr>
+<th ><font size="4px">price: 90,000rs/-</th>
+<th><font size="4px">price: 25,000rs/-</th>
+<th><font size="4px">price: 55,000rs/-</th>
+<th><font size="4px">price: 35,000rs/-</th>
+</tr>
+<tr class="button">
+<th><a href="iphone.html" ><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="oppo.html"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="one%20plus.html"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="poco%20fq.html"><input type="button" value="Show Details" name="Show Details"></a></th>
+</tr>
+
+<table border="0" width="200%">
+<tr class="shadow">
+<th width="25%"><img src="unnamed.png" width="90%"></th>
+<th width="20%"><img src="oppo.jpg" width="90%"></th>
+<th width="22%"><img src="oneplus3.jpg" width="90%"></th>
+<th width="20%"><img src="phone4.jpg" width="90%"></th>
+</tr>
+
+<tr>
+<th ><font size="4px">price: 90,000rs/-</th>
+<th><font size="4px">price: 25,000rs/-</th>
+<th><font size="4px">price: 55,000rs/-</th>
+<th><font size="4px">price: 35,000rs/-</th>
+</tr>
+<tr class="button">
+<th><a href="iphone.html" ><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="oppo.html"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="one%20plus.html"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="poco%20fq.html"><input type="button" value="Show Details" name="Show Details"></a></th>
+</tr>
+<table border="0" width="200%">
+<tr class="shadow">
+<th width="25%"><img src="unnamed.png" width="90%"></th>
+<th width="20%"><img src="oppo.jpg" width="90%"></th>
+<th width="22%"><img src="oneplus3.jpg" width="90%"></th>
+<th width="20%"><img src="phone4.jpg" width="90%"></th>
+</tr>
+
+<tr>
+<th ><font size="4px">price: 90,000rs/-</th>
+<th><font size="4px">price: 25,000rs/-</th>
+<th><font size="4px">price: 55,000rs/-</th>
+<th><font size="4px">price: 35,000rs/-</th>
+</tr>
+<tiphone.html" ><input type="button" value="Show Details" name="Show Doppo.html"><input type="button" value="Show Details" name="Show Done%20plus.html"><input type="button" value="Show Details" name="Show Dpoco%20fq.html"><input type="button" value="Show Details" name="Show Details"></a></th>
+</tr>
+</figure>
+
+</table><br>
+
+</div>
+
+<table border="0" width="100%" bgcolor="#FFFAFA">
+<tr class="jackie" >
+<th align="left"> <font size="5px" font color="gray"><marquee  behavior="alternate" scrollamount="15" direction="left">Ear Phones</marquee></th>
+</tr>
+</table><br>
+
+<table border="0" width="100%">
+<tr class="shadow">
+<th width="18%" ><img src="images.jpg" width="90%"></th>
+<th width="17%" ><img src="hitage-Pro-Earphone-CONCH-In-SDL240295880-1-48683.jpeg" width="90%"></th>
+<th width="20%"><img src="download.jpg" width="90%"></th>
+<th width="20%"><img src="vivo_tws_earphone-.webp" width="90%"></th>
+</tr>
+<tr>
+<th><font size="4px">price: 6,500rs/-</th>
+<th><font size="4px">price: 200rs/-</th>
+<th><font size="4px">price: 900rs/-</th>
+<th><font size="4px">price: 1500rs/-</th>
+</tr>
+<tr class="button">
+<th><a href="#"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="#"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="#"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="#"><input type="button" value="Show Details" name="Show Details"></a></th>
+</table><br>
+
+<table border="0" width="100%" bgcolor="#FFFAFA">
+<tr class="jackie" >
+<th align="left"> <font size="5px" font color="gray"><marquee  behavior="alternate" scrollamount="15" direction="right">Dslr Camers</marquee></th>
+</tr>
+</table><br>
+
+<table border="0" width="100%">
+<tr class="shadow">
+
+<th width="20%"><img src="canon_1263c006_eos_80d_dslr_camera_1455767513000_1225877.jpg" width="90%"></th>
+<th width="20%"><img src="41ysoC0mdHL._AC_SS350_.jpg" width="90%"></th>
+<th width="20%"><img src="nikon-d3500-dslr-cam.jpg" width="90%"></th>
+<th width="20%"><img src="canon_1263c006_eos_80d_dslr_camera_1455767513000_1225877.jpg" width="90%"></th>
+</tr>
+<tr>
+<th><font si
+<th><font size="4px">price: 1,05,000rs/-</th>
+<th><font size="4px">price: 60,000rs/-</th>
+<th><font size="4px">price:  50,000rs/-</th>
+</tr>
+<tr class="button">
+<th><a href="#"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="#"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="#"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="#"><input type="button" value="Show Details" name="Show Details"></a></th>
+</tr>
+</table><br>
+</table>
+
+<table border="0" width="100%" bgcolor="#FFFAFA">
+<tr class="jackie" >
+<th align="left"> <font size="5px" font color="gray"><marquee  behavior="alternate" scrollamount="15" direction="right">Shoes</marquee></th>
+</tr>
+</table><br>
+
+<table border="0" width="100%">
+<tr class="shadow">
+<th width="20%"><img src="shoes1.jpg" width="90%"></th>
+<th width="20%"><img src="shoes2.jpg" width="90%"></th>
+<th width="20%"><img src="shoes3.png" width="90%"></th>
+<th width="20%"><img src="shoes4.jpg" width="90%"></th>
+</tr>
+<tr>
+<th><font size="4px">price: 800rs/-</th>
+<th><font size="4px">price: 650rs/-</th>
+<th><font size="4px">price: 950rs/-</th>
+<th><font size="4px">price: 1000rs/-</th>
+</tr>
+<tr class="button">
+<th><a href="#"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="#"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="#"><input type="button" value="Show Details" name="Show Details"></a></th>
+<th><a href="#"><input type="button" value="Show Details" name="Show Details"></a></th>
+</tr>
+</table><br>
+</table><br><br>
+<footer>
+<table border="0" width="100%">
+<tr>
+<td bgcolor="black"><font color="white"><b>Quick Links</b></td>
+<td bgcolor="black"><font color="white"><b>Follow Us</b></td>
+<td bgcolor="black"><font color="white"><b>Contact</b></td>
+<td bgcolor="black"><font color="white"><b>Search</b></td>
+</tr>
+<tr bgcolor="blue">
+<td>
+<ul><font color="white">
+<li><font color="white">Electronics</li>
+<li><font color="white">Appliances</li>
+<li><font color="white">Baby & Kids</li>
+<li><font color="white">Man</li>
+<li><font color="white">Women</li>
+</ul>
+</td>
+
+<td>
+<ul><font color="white">
+<li><font color="white">Whatsapp</li>
+<li><font color="white">Facebook</li>
+<li><font color="white">Instagram</li>
+<li><font color="white">Tweeter</li>
+
+</ul>
+</td>
+<td>
+<ul><font color="white">
+<li><font color="white">E-mail: flipkart@gmail.com</li>
+<li><font color="white">Contact: 2883892398</li>
+<li><font color="white">Adress: jya aavu hoy tya</li>
+<li><font color="white">Help-line no.:98982kilo chavanu </li>
+</ul>
+</td>
+
+<th width="25%"><input type="text" placeholder="search items" >
+<input type="button" value="search" name="search"></th>
+
+</tr>
+</table>
+</footer>
+
+</body>
+</html>
